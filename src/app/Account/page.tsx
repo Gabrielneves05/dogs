@@ -10,7 +10,7 @@ export default function Account() {
 
     return (
         <main>
-            <h1>Conta: {user?.nome}</h1>
+            <h1>Conta {user?.nome}</h1>
         </main>
     );
 }

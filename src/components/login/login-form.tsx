@@ -9,6 +9,7 @@ import Input from "../forms/input";
 import ErrorMessage from "../helper/error-message";
 import { useEffect } from "react";
 import Link from "next/link";
+import { useUser } from '@/context/userContext';
 
 function FormButton() {
     const {pending} = useFormStatus();
@@ -30,6 +31,8 @@ export default function LoginForm() {
     useEffect(() => {
         if(state.ok) window.location.href = '/account';
     }, [state.ok]);
+
+    const {user} = useUser();
 
     return (
         <>

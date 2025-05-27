@@ -11,6 +11,7 @@ import React from 'react';
 import useMedia from '@/hooks/useMedia';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import logout from '@/actions/logout';
 
 function getTitle(pathname: string) {
   switch (pathname) {
@@ -32,8 +33,10 @@ export default function AccountHeader() {
     setMobileMenu(false);
   }, [pathname]);
 
-  function handleLogout() {
-    // userLogout();
+  async function handleLogout() {
+    await logout();
+
+    window.location.href = '/login';
   }
 
   return (
