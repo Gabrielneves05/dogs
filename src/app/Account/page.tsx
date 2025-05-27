@@ -1,16 +1,14 @@
-'use client';
+import { Metadata } from "next";
 
-import userGet from "@/actions/userGet";
-import { useUser } from "@/context/userContext";
+export const metadata: Metadata = {
+    title: "Minha Conta",
+};
 
 export default function Account() {
-    const {user} = useUser();
-
-    console.log(user);
 
     return (
         <main>
-            <h1>Conta {user?.nome}</h1>
+            <h1>Conta</h1>
         </main>
     );
 }
