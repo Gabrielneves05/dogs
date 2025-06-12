@@ -6,8 +6,8 @@ import { useFormStatus, useFormState } from "react-dom";
 import Button from "../forms/button";
 import Input from "../forms/input";
 import ErrorMessage from "../helper/error-message";
-import { useEffect, useState } from "react";
-import userPost from '@/actions/userPost';
+import { useState } from "react";
+import photoPost from '@/actions/photoPost';
 
 function FormButton() {
     const {pending} = useFormStatus();
@@ -20,7 +20,7 @@ function FormButton() {
 }
 
 export default function AccountPhotoPost() {
-    const [state, action] = useFormState(userPost, {
+    const [state, action] = useFormState(photoPost, {
         ok: false,
         error: '',
         data: null

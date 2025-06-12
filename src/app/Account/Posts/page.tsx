@@ -1,6 +1,7 @@
 import AccountPhotoPost from "@/components/account/accountPhotoPost";
-
 import { Metadata } from "next";
+
+export const runtime = "edge";
 
 export const metadata: Metadata = {
     title: "Postar | Minha Conta",
